@@ -2,7 +2,7 @@ import { Button, Flex, Heading, Text, Icon } from "@chakra-ui/react";
 import { auth, provider } from "./Firebase";
 import { useEffect } from "react";
 import FormContainer from "./FormContainer";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { signInWithPopup } from "firebase/auth";
 
