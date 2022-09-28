@@ -42,7 +42,7 @@ const Timer = () => {
           boxShadow="dark-lg"
         >
           <Heading as="h1" fontSize="3xl" mb="5">
-            Stopwatch
+            Timer
           </Heading>
           <Heading as="h1" fontSize="6xl" mb="5">
             {minutes < 10 ? "0" + minutes : minutes} :{" "}
