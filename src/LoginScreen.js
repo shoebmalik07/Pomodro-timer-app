@@ -36,7 +36,7 @@ const LoginScreen = () => {
           onClick={signInWithGoogle}
         >
           <Icon as={FcGoogle} mx="2" fontSize={"xl"} />{" "}
-          <Text fontSize="l">sign in with google</Text>
+          <Text fontSize="l">Sign in with Google</Text>
         </Button>
       </FormContainer>
     </Flex>

@@ -3,19 +3,19 @@ import { Button, Heading, Flex } from "@chakra-ui/react";
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
-  const [minutes, setMinutes] = useState(0);
+  const [minutes, setMinutes] = useState(25);
 
   var timer;
   useEffect(() => {
     timer = setInterval(() => {
-      setSeconds(seconds + 1);
-      if (seconds === 59) {
-        setMinutes(minutes + 1);
-        setSeconds(0);
+      setSeconds(seconds - 1);
+      if (seconds === 0) {
+        setMinutes(minutes - 1);
+        setSeconds(59);
       }
-      if (minutes === 25) {
+      if (minutes === 0) {
         setSeconds(0);
-        setMinutes(0);
+        setMinutes(25);
       }
     }, 1000);
     return () => clearInterval(timer);
@@ -23,7 +23,7 @@ const Timer = () => {
 
   const restart = () => {
     setSeconds(0);
-    setMinutes(0);
+    setMinutes(25);
   };
   const pause = () => {
     clearInterval(timer);
